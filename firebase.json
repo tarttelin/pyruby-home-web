@@ -9,6 +9,12 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "api/hello",
+        "function": "say-hello"
+      }
     ]
   }
 }
