@@ -12,9 +12,8 @@
     ],
     "rewrites": [
       {
-        "source": "/api/hello",
-        "function": "say-hello",
-        "region": "europe-west2"
+        "source": "/api/**",
+        "function": "greet"
       }
     ]
   }
