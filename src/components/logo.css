@@ -1,0 +1,74 @@
+.logo-animate {
+    display: grid;
+    grid-template-columns: repeat(3, 0.3em);
+    grid-template-rows: repeat(3, 0.3em);
+    gap: 2px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1rem;
+}
+
+.logo-square {
+    animation: blink var(--blink-speed) steps(40, end);
+}
+
+@keyframes blink {
+    from, to { opacity: 100%; }
+    50% { opacity: 0%; }
+}
+
+.logo-square:nth-child(1 ) {
+    background-color: var(--primary-color);
+}
+
+.logo-square:nth-child(7 ) {
+    background-color: var(--primary-color);
+    animation-delay: calc(var(--blink-speed) * 1);
+}
+
+.logo-square:nth-child(3) {
+    background-color: var(--secondary-color);
+    animation-delay: calc(var(--blink-speed) * 4);
+}
+
+.logo-square:nth-child(6) {
+    background-color: var(--secondary-color);
+    animation-delay: calc(var(--blink-speed) * 3);
+}
+
+.logo-square:nth-child(5) {
+    background-color: var(--secondary-color);
+    animation-delay: calc(var(--blink-speed) * 2);
+}
+
+.logo-square:nth-child(8) {
+    background-color: var(--secondary-color);
+    animation-delay: calc(var(--blink-speed) * 5);
+}
+
+.logo-container h1 {
+    display: inline;
+    overflow: hidden;
+    margin-top: 0.5em;
+    padding: 0;
+    line-height: normal;
+    animation: typing calc(var(--blink-speed) * 8) steps(20, end);
+}
+
+.logo-py {
+    color: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-ruby {
+    color: var(--secondary-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 6em }
+}
