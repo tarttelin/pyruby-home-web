@@ -13,7 +13,10 @@
     "rewrites": [
       {
         "source": "/api/**",
-        "function": "greet"
+        "run": {
+          "serviceId": "pyruby-backend",
+          "region": "europe-west2"
+        }
       }
     ]
   }
