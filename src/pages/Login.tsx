@@ -21,7 +21,7 @@ interface SignInPageProps {
 
 const SignInPage: React.FC<SignInPageProps> = ({setSignedInUser, user}) => {
     const auth = getAuth();
-    const [token, setToken] = useState("none");
+    const [token, setToken] = useState("loading");
     useEffect(() => {
         const unregisterAuthObserver = getAuth().onAuthStateChanged(async (user) => {
             setSignedInUser(user);

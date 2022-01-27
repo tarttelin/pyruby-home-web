@@ -6,11 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-firebase-admin = "*"
-flask = "*"
-gunicorn = "*"
 ariadne = "*"
-pydantic = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"

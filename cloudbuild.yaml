@@ -2,11 +2,15 @@ steps:
 - name: node:16
   entrypoint: npm
   args: ['install']
+  id: Dependencies
 - name: node:16
   entrypoint: npm
   args: ['run', 'ci']
+  id: Test
 - name: node:16
   entrypoint: npm
   args: ['run', 'build']
-- name: gcr.io/$PROJECT_ID/firebase
+  id: Build deployable
+- name: europe-west2-docker.pkg.dev/$PROJECT_ID/pyruby-web-home/firebase-builder
   args: ['deploy', '--project=$PROJECT_ID', '--only=hosting']
+  id: Deploy
